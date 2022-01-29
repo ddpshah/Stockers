@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Stock Analysis</string>
+    <string name="app_name">Investt</string>
     <!--    //Headings-->
     <string name="heading_one">Get Real Time data </string>
     <string name="heading_two">Be Updated with latest news</string>
