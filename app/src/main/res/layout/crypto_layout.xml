@@ -33,7 +33,7 @@
         android:text="Stock Name"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/IV_crypto"
@@ -45,7 +45,7 @@
         android:id="@+id/TV_exchange_worth_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/questrial"
         android:gravity="center"
         android:text="100"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/questrial"
         android:gravity="center"
-        android:text="Rs: "
+        android:text="$: "
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/TV_exchange_worth_number"
         app:layout_constraintEnd_toStartOf="@+id/TV_exchange_worth_number"
@@ -73,11 +73,20 @@
         android:id="@+id/TV_worthText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="4dp"
         android:fontFamily="@font/questrial"
         android:text="Worth"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/TV_exchange_worth_number"
         app:layout_constraintEnd_toStartOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/TV_exchange_worth_number" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/nfc"
+        app:layout_constraintEnd_toEndOf="@+id/TV_exchange_worth_number"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

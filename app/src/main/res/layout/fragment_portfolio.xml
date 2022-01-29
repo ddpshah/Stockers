@@ -10,7 +10,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#242444">
+        android:background="@color/bg_blue">
 
         <TextView
             android:id="@+id/TV_cartel_name"
@@ -30,8 +30,7 @@
             android:id="@+id/TV_wallet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
             android:fontFamily="@font/questrial"
             android:text="Market "
             android:textColor="@color/white"
@@ -56,8 +55,7 @@
             android:id="@+id/TV_stock_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/questrial"

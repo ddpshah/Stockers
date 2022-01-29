@@ -17,4 +17,5 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="powered_by_runtime_terror">Powered by Runtime Terror</string>
 </resources>
