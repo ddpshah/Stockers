@@ -1,4 +1,4 @@
-# Hackathon
+# Runtime Terror
 Hackathon application
 
 Team members:
