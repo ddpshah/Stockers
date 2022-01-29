@@ -4,13 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.fragment.app.Fragment;
 
 
 public class ChartsFragment extends Fragment {
 
-
+private WebView webView;
     public ChartsFragment() {
         // Required empty public constructor
     }
@@ -27,6 +30,12 @@ public class ChartsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_charts, container, false);
-       return view;
+        String chartURL="http://www.google.com";
+        webView=view.findViewById(R.id.webView);
+      webView.setWebViewClient(new WebViewClient());
+      webView.loadUrl(chartURL);
+        WebSettings webSettings=webView.getSettings();
+        return view;
     }
+
 }

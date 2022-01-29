@@ -59,7 +59,6 @@ public class PortfolioFragment extends Fragment {
 
         recyclerViewEx.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         adapterEx=new ExchangeAdapter(getContext(),exchangeList);
-
         recyclerView.setAdapter(adapter);
         recyclerViewEx.setAdapter(adapterEx);
         loadExchange();
@@ -183,7 +182,6 @@ public class PortfolioFragment extends Fragment {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
                     }
                     adapterEx.notifyDataSetChanged();
                 }

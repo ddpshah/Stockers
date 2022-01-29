@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Stock Analysis</string>
+    <!--    //Headings-->
+    <string name="heading_one">Get Real Time data </string>
+    <string name="heading_two">Be Updated with latest news</string>
+    <string name="heading_three">Think ahead with computed predictions</string>
+    <string name="heading_fourth">Picture says more than words</string>
+
+    <!--    //Description-->
+    <string name="desc_one">Grow your portfolio by getting real time data and understanding the market status </string>
+    <string name="desc_two">Read the current news related to finance which will shape the market</string>
+    <string name="desc_three">With our own machine learning model, get predicted value of stock in future days to come</string>
+    <string name="desc_fourth">Here you get all the charts that you wish for, with up to date data, to let you take informed decisions</string>
+    <string name="title_activity_on_boarding">OnBoardingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 </resources>

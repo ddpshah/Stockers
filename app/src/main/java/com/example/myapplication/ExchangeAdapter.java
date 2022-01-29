@@ -5,6 +5,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,6 +38,12 @@ public class ExchangeAdapter extends RecyclerView.Adapter<ExchangeAdapter.Exchan
 
         holder.name.setText(exchangeList.get(position).getName());
         holder.price.setText(exchangeList.get(position).getPrince());
+        if(position==0){
+            holder.iv.setImageResource(R.drawable.nasdaq_f);
+        }
+        else{
+            holder.iv.setImageResource(R.drawable.s_p);
+        }
         AnimationDrawable animationDrawable=(AnimationDrawable) holder.CV_cryptoItem.getBackground();
         animationDrawable.setEnterFadeDuration(1000);
         animationDrawable.setExitFadeDuration(2000);
@@ -51,12 +58,13 @@ public class ExchangeAdapter extends RecyclerView.Adapter<ExchangeAdapter.Exchan
     public class ExchangeViewholder extends RecyclerView.ViewHolder{
         TextView name,price;
         ConstraintLayout CV_cryptoItem;
-
+        ImageView iv;
         public ExchangeViewholder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.TV_exchange_name);
             price=itemView.findViewById(R.id.TV_exchange_worth_number);
             CV_cryptoItem=itemView.findViewById(R.id.CV_cryptoItem);
+            iv=itemView.findViewById(R.id.IV_crypto);
         }
     }
 }

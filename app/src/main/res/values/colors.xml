@@ -11,4 +11,10 @@
     <color name="recyclerView">#463C6E</color>
     <color name="black_shade_1">#292D36</color>
     <color name="Grey">#424242</color>
-    <color name="yellow">#ffa500</color></resources>
+    <color name="yellow">#ffa500</color>
+    <color name="background">#F0F4F3</color>
+    <color name="buttontext">#50C2C9</color>
+
+    <color name="inactive">#C4C4C4</color>
+    <color name="active">#50C2C9</color>
+</resources>
