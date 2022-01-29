@@ -57,7 +57,7 @@ public class PortfolioFragment extends Fragment {
 
         recyclerViewEx=view.findViewById(R.id.RV_wallet);
 
-        recyclerViewEx.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));;
+        recyclerViewEx.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         adapterEx=new ExchangeAdapter(getContext(),exchangeList);
 
         recyclerView.setAdapter(adapter);
@@ -75,6 +75,35 @@ public class PortfolioFragment extends Fragment {
             @Override
             public void run() {
                 loadRecyclerView();
+            }
+        };
+
+        handler.postDelayed(runnable,milli);
+        recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                switch(newState){
+                    case RecyclerView.SCROLL_STATE_IDLE:
+                        handler.postDelayed(runnable, milli);
+                        break;
+                    case RecyclerView.SCROLL_STATE_DRAGGING:
+                        handler.removeCallbacks(runnable);
+                        break;
+                    case RecyclerView.SCROLL_STATE_SETTLING:
+                        handler.removeCallbacks(runnable);
+                        break;
+                }
+            }
+        });
+    }
+
+    private  void refresh(int milli,int a){
+
+        runnable =new Runnable() {
+            @Override
+            public void run() {
+                loadExchange();
             }
         };
 
@@ -130,7 +159,7 @@ public class PortfolioFragment extends Fragment {
             });
 
             requestQueue.add(jsonArrayRequest);
-            refresh(2000);
+            refresh(100000);
         } catch (Exception e) {
           //  Log.e("Exception",e.toString());
         }
@@ -167,7 +196,7 @@ public class PortfolioFragment extends Fragment {
             });
 
             requestQueue.add(jsonArrayRequest);
-           // refresh(2000);
+            refresh(100000);
         } catch (Exception e) {
             Log.e("Exception",e.toString());
         }
