@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PortfolioFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#242444">
+
+        <TextView
+            android:id="@+id/TV_cartel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/questrial"
+            android:text="Portfolio"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TV_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/questrial"
+            android:text="Market "
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TV_cartel_name" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TV_wallet">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/TV_stock_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/questrial"
+            android:text="Stocks Prices"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RV_wallet" />
+
+        <!--    <androidx.recyclerview.widget.RecyclerView-->
+        <!--        android:id="@+id/RV_stocks_owned"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="280dp"-->
+        <!--        android:clipToPadding="false"-->
+        <!--        android:paddingStart="22dp"-->
+        <!--        android:paddingLeft="22dp"-->
+        <!--        android:paddingEnd="22dp"-->
+        <!--        android:scrollbars="vertical"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/TV_stock_main" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_stocks_owned"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="60dp"
+            android:background="@drawable/recyclerview_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TV_stock_main">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <!--    <ScrollView-->
+        <!--        android:id="@+id/SV_bottom_navigation"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent">-->
+
+        <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content">-->
+
+        <!--            <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="100dp"-->
+        <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                app:layout_constraintStart_toStartOf="parent">-->
+
+        <!--                <com.google.android.material.bottomappbar.BottomAppBar-->
+        <!--                    android:id="@+id/app_bar"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="bottom"-->
+        <!--                    app:fabCradleMargin="8dp">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:orientation="horizontal">-->
+
+        <!--                        <LinearLayout-->
+        <!--                            android:id="@+id/LL_news_home"-->
+        <!--                            android:layout_width="0dp"-->
+        <!--                            android:layout_height="match_parent"-->
+        <!--                            android:layout_weight="0.2"-->
+        <!--                            android:orientation="vertical">-->
+
+        <!--                            <ImageView-->
+        <!--                                android:id="@+id/IV_news_home"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_baseline_lock_24" />-->
+
+        <!--                            <TextView-->
+        <!--                                android:id="@+id/TV_news_home"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:gravity="center_horizontal"-->
+        <!--                                android:text="News"-->
+        <!--                                android:textAlignment="center"-->
+        <!--                                android:textColor="#676767"-->
+        <!--                                android:textSize="12sp"-->
+        <!--                                android:textStyle="bold" />-->
+        <!--                        </LinearLayout>-->
+
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="0dp"-->
+        <!--                            android:layout_height="match_parent"-->
+        <!--                            android:layout_weight="0.2"-->
+        <!--                            android:orientation="vertical">-->
+
+        <!--                            <ImageView-->
+        <!--                                android:id="@+id/iv_profile"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_baseline_lock_24" />-->
+
+        <!--                            <TextView-->
+        <!--                                android:id="@+id/tv_profile"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:gravity="center_horizontal"-->
+        <!--                                android:text="Profile"-->
+        <!--                                android:textAlignment="center"-->
+        <!--                                android:textColor="#676767"-->
+        <!--                                android:textSize="12sp"-->
+        <!--                                android:textStyle="bold" />-->
+        <!--                        </LinearLayout>-->
+
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="0dp"-->
+        <!--                            android:layout_height="match_parent"-->
+        <!--                            android:layout_weight="0.2"-->
+        <!--                            android:orientation="vertical"-->
+        <!--                            android:visibility="invisible">-->
+
+        <!--                            <ImageView-->
+        <!--                                android:id="@+id/tv_invisible"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_baseline_lock_24" />-->
+
+        <!--                            <TextView-->
+        <!--                                android:id="@+id/iv_invisible"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:gravity="center_horizontal"-->
+        <!--                                android:text="Home"-->
+        <!--                                android:textAlignment="center"-->
+        <!--                                android:textColor="#676767"-->
+        <!--                                android:textSize="12sp"-->
+        <!--                                android:textStyle="bold"-->
+        <!--                                android:visibility="invisible" />-->
+        <!--                        </LinearLayout>-->
+
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="match_parent"-->
+        <!--                            android:layout_weight="0.2"-->
+        <!--                            android:orientation="vertical">-->
+
+        <!--                            <ImageView-->
+        <!--                                android:id="@+id/iv_trading"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_baseline_lock_24" />-->
+
+        <!--                            <TextView-->
+        <!--                                android:id="@+id/tv_trading"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:gravity="center_horizontal"-->
+        <!--                                android:text="Trading"-->
+        <!--                                android:textAlignment="center"-->
+        <!--                                android:textColor="#676767"-->
+        <!--                                android:textSize="12sp"-->
+        <!--                                android:textStyle="bold" />-->
+        <!--                        </LinearLayout>-->
+
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="match_parent"-->
+        <!--                            android:layout_weight="0.2"-->
+        <!--                            android:orientation="vertical">-->
+
+        <!--                            <ImageView-->
+        <!--                                android:id="@+id/IV_contactInfo"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:layout_weight="1"-->
+        <!--                                android:src="@drawable/ic_baseline_lock_24" />-->
+
+        <!--                            <TextView-->
+        <!--                                android:id="@+id/TV_contactInfo"-->
+        <!--                                android:layout_width="match_parent"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:gravity="center_horizontal"-->
+        <!--                                android:text="Setting"-->
+        <!--                                android:textAlignment="center"-->
+        <!--                                android:textColor="#676767"-->
+        <!--                                android:textSize="12sp"-->
+        <!--                                android:textStyle="bold" />-->
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+
+        <!--                </com.google.android.material.bottomappbar.BottomAppBar>-->
+
+
+        <!--                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--                    android:id="@+id/card_btr"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:backgroundTint="#584EED"-->
+        <!--                    android:src="@drawable/ic_baseline_call_24"-->
+        <!--                    app:layout_anchor="@id/app_bar"-->
+        <!--                    app:maxImageSize="30dp" />-->
+        <!--            </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+        <!--    </ScrollView>-->
+
+        <!--    <View-->
+        <!--        android:id="@+id/divider2"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="1dp"-->
+        <!--        android:layout_marginBottom="16dp"-->
+        <!--        android:background="?android:attr/listDivider"-->
+        <!--        android:visibility="invisible"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="@+id/SV_bottom_navigation"-->
+        <!--        app:layout_constraintVertical_bias="0.87" />-->
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </ScrollView>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="100dp"
+            android:layout_height="3dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/black"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RV_stocks_owned" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
