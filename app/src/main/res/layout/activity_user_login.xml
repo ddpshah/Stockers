@@ -29,7 +29,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/questrial"
         android:text="Welcome Back!"
-        android:textColor="@color/red"
+        android:textColor="@color/active"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toTopOf="@+id/guideline31" />
@@ -47,8 +47,8 @@
         android:hint="Email Address"
         android:textColorHint="@color/slight_grey"
         app:endIconMode="clear_text"
-        app:endIconTint="@color/red"
-        app:hintTextColor="@color/red"
+        app:endIconTint="@color/colorError"
+        app:hintTextColor="@color/active"
         app:layout_constraintEnd_toStartOf="@+id/guideline30"
         app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
@@ -74,8 +74,8 @@
         android:hint="Password"
         android:textColorHint="@color/slight_grey"
         app:endIconMode="password_toggle"
-        app:endIconTint="@color/red"
-        app:hintTextColor="@color/red"
+        app:endIconTint="@color/active"
+        app:hintTextColor="@color/active"
         app:layout_constraintEnd_toStartOf="@+id/guideline30"
         app:layout_constraintStart_toStartOf="@+id/guideline29"
         app:layout_constraintTop_toBottomOf="@+id/et_email_user">
@@ -141,7 +141,7 @@
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/questrial"
         android:text="Register"
-        android:textColor="@color/red"
+        android:textColor="@color/active"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomline"
         app:layout_constraintEnd_toEndOf="@+id/bottomline"
@@ -158,7 +158,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="@+id/Register"
         app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:srcCompat="@drawable/icon_8" />
+        app:srcCompat="@drawable/stock_icon" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline29"
@@ -196,7 +196,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/questrial"
         android:text="Forgot Password?"
-        android:textColor="@color/red"
+        android:textColor="@color/active"
         android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline30"
         app:layout_constraintHorizontal_bias="0.6"

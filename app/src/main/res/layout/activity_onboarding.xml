@@ -14,6 +14,8 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:text="Skip"
+        android:textStyle="bold"
+        android:fontFamily="@font/questrial"
         android:textColor="@color/buttontext"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,6 +53,7 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:text="Back"
+        android:fontFamily="@font/questrial"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -60,6 +63,8 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:text="Next"
+        android:textStyle="bold"
+        android:fontFamily="@font/questrial"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/ellipse2" />
 

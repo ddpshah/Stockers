@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/questrial"
         android:text="Register"
-        android:textColor="@color/red"
+        android:textColor="@color/active"
         android:textSize="35dp"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/backbutton"
@@ -46,7 +46,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button"
-        android:backgroundTint="@color/red"
         android:fontFamily="@font/questrial"
         android:text="Sign Up"
         android:textAllCaps="false"
@@ -65,7 +64,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button"
-        android:backgroundTint="@color/red"
         android:fontFamily="@font/questrial"
         android:text="Go Back to Login"
         android:textAllCaps="false"
@@ -79,13 +77,13 @@
     <ImageView
         android:id="@+id/backbutton"
         android:layout_width="30dp"
-        android:layout_height="29dp"
+        android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:contentDescription="Back"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toTopOf="@+id/guideline11"
-        app:srcCompat="@drawable/arrow_back" />
+        android:src="@drawable/arrow"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email_new"
@@ -99,10 +97,10 @@
         android:hint="Enter Email Address"
         android:textColorHint="@color/slight_grey"
         app:endIconMode="clear_text"
-        app:endIconTint="@color/red"
+        app:endIconTint="@color/colorError"
         app:helperText="Required*"
-        app:helperTextTextColor="@color/red"
-        app:hintTextColor="@color/red"
+        app:helperTextTextColor="@color/colorError"
+        app:hintTextColor="@color/active"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
@@ -128,12 +126,12 @@
         android:textColorHint="@color/slight_grey"
         app:counterEnabled="true"
         app:counterMaxLength="20"
-        app:counterOverflowTextColor="@color/red"
+        app:counterOverflowTextColor="@color/colorError"
         app:endIconMode="password_toggle"
-        app:endIconTint="@color/red"
+        app:endIconTint="@color/active"
         app:helperText="Required*"
-        app:helperTextTextColor="@color/red"
-        app:hintTextColor="@color/red"
+        app:helperTextTextColor="@color/colorError"
+        app:hintTextColor="@color/active"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/email_new">
@@ -158,12 +156,12 @@
         android:textColorHint="@color/slight_grey"
         app:counterEnabled="true"
         app:counterMaxLength="20"
-        app:counterOverflowTextColor="@color/red"
+        app:counterOverflowTextColor="@color/colorError"
         app:endIconMode="password_toggle"
-        app:endIconTint="@color/red"
+        app:endIconTint="@color/active"
         app:helperText="Required*"
-        app:helperTextTextColor="@color/red"
-        app:hintTextColor="@color/red"
+        app:helperTextTextColor="@color/colorError"
+        app:hintTextColor="@color/active"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/Password_new">
@@ -203,5 +201,15 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_end="5dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomline"
+        app:layout_constraintEnd_toEndOf="@+id/bottomline"
+        app:layout_constraintStart_toStartOf="@+id/bottomline"
+        app:srcCompat="@drawable/stock_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
