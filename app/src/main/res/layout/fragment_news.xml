@@ -16,7 +16,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -25,9 +24,9 @@
                 android:fontFamily="@font/questrial"
                 android:gravity="center"
                 android:text="News"
-                android:textSize="18sp"
                 android:textAlignment="center"
-                android:textColor="@color/ORANGISH"
+                android:textColor="@color/white"
+                android:textSize="18sp"
                 android:textStyle="bold"></TextView>
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
