@@ -57,14 +57,6 @@ public class PortfolioFragment extends Fragment {
         exchangeList=new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter=new Adapter(getContext(),stocks);
-        search=view.findViewById(R.id.search_stock);
-
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getContext(),Search_stock.class));
-            }
-        });
 
 
         recyclerViewEx=view.findViewById(R.id.RV_wallet);

@@ -301,16 +301,46 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/RV_stocks_owned" />
 
-        <ImageView
-            android:id="@+id/search_stock"
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_baseline_search_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/RV_stocks_owned" />/>
+            android:layout_marginStart="16dp"
+            android:text="Stock Name"
 
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/questrial"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Price"
+            android:fontFamily="@font/questrial"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Security Code"
+            android:textColor="@color/white"
+            android:fontFamily="@font/questrial"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/divider" /><![CDATA[
+
+        />
+
+    ]]>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

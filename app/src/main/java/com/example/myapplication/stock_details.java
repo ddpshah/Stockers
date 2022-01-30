@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 public class stock_details extends AppCompatActivity {
 
@@ -16,5 +17,6 @@ public class stock_details extends AppCompatActivity {
         Intent intent=getIntent();
         String Issuer_name=intent.getStringExtra("Issuer");
         Log.d("Name_Issuer",Issuer_name);
+        Toast.makeText(this, Issuer_name, Toast.LENGTH_SHORT).show();
     }
 }
