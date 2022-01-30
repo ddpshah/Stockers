@@ -44,7 +44,6 @@ public class User_Login extends AppCompatActivity {
 
         final loading_user_admin loadingdialog = new loading_user_admin(User_Login.this);
 
-        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN); //(Hides notification panel)
 
         if (!isConnected()) {
             //Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
