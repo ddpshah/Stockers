@@ -1,7 +1,7 @@
 package com.example.myapplication;
 
 public class Stocks {
-    private String SecurityCode,SecurityID ,Price,IssuerName;
+    private String SecurityCode,SecurityID ,Price,IssuerName,priceChange;
    public Stocks(){
 
    }
@@ -41,5 +41,13 @@ public class Stocks {
 
     public void setIssuerName(String issuerName) {
         IssuerName = issuerName;
+    }
+
+    public String getPriceChange() {
+        return priceChange;
+    }
+
+    public void setPriceChange(String priceChange) {
+        this.priceChange = priceChange;
     }
 }

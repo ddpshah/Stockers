@@ -10,6 +10,8 @@ import android.webkit.WebViewClient;
 
 import androidx.fragment.app.Fragment;
 
+import java.nio.charset.StandardCharsets;
+
 public class PredictionsFragment extends Fragment {
 
 private WebView webView;
@@ -31,7 +33,8 @@ private WebView webView;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        String dataURL="http://53b3-35-245-100-17.ngrok.io/";
+        String dataURL="http://a0ee-35-237-123-143.ngrok.io/";
+
         View view= inflater.inflate(R.layout.fragment_predictions, container, false);
         webView=view.findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
@@ -39,8 +42,6 @@ private WebView webView;
         webView.loadUrl(dataURL);
         WebSettings webSettings=webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-
-
         return view;
 }
     public void setDesktopMode(WebView webView,boolean enabled) {

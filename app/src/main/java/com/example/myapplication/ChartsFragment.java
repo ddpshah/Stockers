@@ -30,10 +30,10 @@ private WebView webView;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_charts, container, false);
-        String chartURL="http://5995-35-196-116-54.ngrok.io/";
+        String chartURL="http://d2e7-35-231-20-128.ngrok.io/";
         webView=view.findViewById(R.id.webView);
-      webView.setWebViewClient(new WebViewClient());
-      webView.loadUrl(chartURL);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl(chartURL);
         WebSettings webSettings=webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         return view;
