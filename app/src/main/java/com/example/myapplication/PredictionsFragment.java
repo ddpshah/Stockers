@@ -30,6 +30,7 @@ private WebView webView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         String dataURL="http://53b3-35-245-100-17.ngrok.io/";
         View view= inflater.inflate(R.layout.fragment_predictions, container, false);
         webView=view.findViewById(R.id.webView);

@@ -1,25 +1,15 @@
 package com.example.myapplication;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Fragment;
-import android.os.Build;
-import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Window;
 
-import java.util.Objects;
-
-public class loading_user_admin{
+public class loading_inapp {
 
     private Activity activity;
-    private Fragment fragment;
     private AlertDialog dialog;
 
-    loading_user_admin(Activity myActivity){
+    loading_inapp(Activity myActivity){
         activity=myActivity;
     }
 
@@ -35,10 +25,8 @@ public class loading_user_admin{
 
     }
 
-
     void dismissDialog(){
         dialog.dismiss();
     }
-
 
 }

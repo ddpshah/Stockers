@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".stock_details"
+            android:exported="false" />
+        <activity
             android:name=".forget_password"
             android:exported="false" />
         <activity
@@ -32,6 +35,9 @@
         </activity>
         <activity
             android:name=".OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Search_stock"
             android:exported="false" />
         <activity
             android:name=".NewsDetailActivity"

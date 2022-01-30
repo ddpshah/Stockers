@@ -301,6 +301,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/RV_stocks_owned" />
 
+        <ImageView
+            android:id="@+id/search_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_search_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RV_stocks_owned" />/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
