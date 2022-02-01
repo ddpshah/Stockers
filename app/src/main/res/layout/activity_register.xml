@@ -125,7 +125,7 @@
         android:hint="Enter Password"
         android:textColorHint="@color/slight_grey"
         app:counterEnabled="true"
-        app:counterMaxLength="20"
+        app:counterMaxLength="8"
         app:counterOverflowTextColor="@color/colorError"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/active"
@@ -155,7 +155,7 @@
         android:hint="Re-enter Password"
         android:textColorHint="@color/slight_grey"
         app:counterEnabled="true"
-        app:counterMaxLength="20"
+        app:counterMaxLength="8"
         app:counterOverflowTextColor="@color/colorError"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/active"
@@ -206,10 +206,10 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomline"
         app:layout_constraintEnd_toEndOf="@+id/bottomline"
         app:layout_constraintStart_toStartOf="@+id/bottomline"
-        app:srcCompat="@drawable/stock_icon" />
+        app:srcCompat="@drawable/ic_logo_new" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

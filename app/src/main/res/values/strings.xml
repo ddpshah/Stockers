@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Investt</string>
+    <string name="app_name">Stockers</string>
     <!--    //Headings-->
     <string name="heading_one">Get Real Time data </string>
     <string name="heading_two">Be Updated with latest news</string>
@@ -18,4 +18,10 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="powered_by_runtime_terror">Powered by Runtime Terror</string>
+
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="watchlist_empty">You are not watching any stocks at the moment</string>
 </resources>

@@ -18,5 +18,11 @@ public class stock_details extends AppCompatActivity {
         String Issuer_name=intent.getStringExtra("Issuer");
         Log.d("Name_Issuer",Issuer_name);
         Toast.makeText(this, Issuer_name, Toast.LENGTH_SHORT).show();
+        addItemToSheet(Issuer_name);
+
+    }
+
+    private void addItemToSheet(String issuer_name) {
+
     }
 }

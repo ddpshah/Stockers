@@ -10,7 +10,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/bg_blue">
+        android:background="@color/black">
 
         <TextView
             android:id="@+id/TV_cartel_name"
@@ -19,23 +19,23 @@
             android:layout_marginTop="14dp"
             android:fontFamily="@font/questrial"
             android:text="Portfolio"
-            android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textColor="@color/active"
+            android:textSize="32sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/RV_wallet"
+            app:layout_constraintStart_toStartOf="@+id/RV_wallet"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/TV_wallet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/questrial"
-            android:text="Market "
+            android:text="Market"
             android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TV_cartel_name" />
 
@@ -51,17 +51,15 @@
         </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
-            android:textStyle="bold"
             android:id="@+id/TV_stock_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/questrial"
             android:text="Stocks Prices"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/RV_wallet" />
 
@@ -82,8 +80,8 @@
             android:id="@+id/RV_stocks_owned"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:paddingTop="60dp"
             android:background="@drawable/recyclerview_background"
+            android:paddingTop="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -306,11 +304,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Stock Name"
-
             android:layout_marginTop="8dp"
             android:fontFamily="@font/questrial"
-            android:textColor="@color/white"
+            android:text="Stock Name"
+            android:textColor="@color/active"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -318,10 +315,10 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="Price"
+            android:layout_marginEnd="18dp"
             android:fontFamily="@font/questrial"
-            android:textColor="@color/white"
+            android:text="Price"
+            android:textColor="@color/active"
             app:layout_constraintBottom_toBottomOf="@+id/textView8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView8" />
@@ -330,13 +327,23 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
             android:layout_marginTop="8dp"
-            android:text="Security Code"
-            android:textColor="@color/white"
+            android:layout_marginEnd="24dp"
             android:fontFamily="@font/questrial"
+            android:text="Security Code"
+            android:textColor="@color/active"
             app:layout_constraintEnd_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/divider" /><![CDATA[
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_logo_new"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" /><![CDATA[
 
         />
 

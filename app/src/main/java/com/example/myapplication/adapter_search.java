@@ -16,7 +16,6 @@ import java.util.ArrayList;
         public static ArrayList<recycler_search> list;
         private MyViewHolder.OnClickOrder mOrderPageListener;
         public adapter_search(ArrayList<recycler_search> list,MyViewHolder.OnClickOrder mOrderPageListener){
-
             this.list=list;
             this.mOrderPageListener = mOrderPageListener;
         }
@@ -33,7 +32,6 @@ import java.util.ArrayList;
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
             holder.id.setText(list.get(position).getIssuer());
             holder.desc.setText(list.get(position).getSecurity_Name());
-
         }
 
         @Override
@@ -56,7 +54,7 @@ import java.util.ArrayList;
 
             @Override
             public void onClick(View view) {
-                mOrderPageListener.getIssuerName(list.get(getAbsoluteAdapterPosition()).getIssuer());
+                mOrderPageListener.getIssuerName(list.get(getAbsoluteAdapterPosition()).getSecurity_Name());
             }
             public static interface OnClickOrder {
                 void getIssuerName(String issuer);

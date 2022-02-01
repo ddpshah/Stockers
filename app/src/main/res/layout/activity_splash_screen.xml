@@ -8,7 +8,7 @@
     tools:context=".SplashScreenActivity">
 
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/bg"
         android:layout_width="wrap_content"
         android:layout_height="1570dp"
@@ -17,30 +17,28 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/splash_scrren_bg" />
+        app:srcCompat="@drawable/splash_scrren_bg" />-->
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginTop="72dp"
-        android:src="@drawable/stock_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bg" />
+        android:src="@drawable/ic_logo_new"
+        app:layout_constraintEnd_toEndOf="@+id/app_name"
+        app:layout_constraintStart_toStartOf="@+id/app_name"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/questrial"
         android:gravity="center_horizontal"
-        android:text="Investt: Pricing and Analysis"
+        android:text="Stockers"
         android:textAlignment="center"
         android:textColor="#F1ECEC"
-        android:textSize="24dp"
+        android:textSize="48dp"
         android:textStyle="bold"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,10 +51,9 @@
         android:layout_height="200dp"
         app:flow_verticalBias="0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_name"
         app:lottie_autoPlay="true"
-        app:lottie_rawRes="@raw/animation" />
+        app:lottie_rawRes="@raw/intro_chart" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

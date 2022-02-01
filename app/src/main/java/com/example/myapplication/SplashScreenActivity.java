@@ -27,13 +27,15 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         logo = findViewById(R.id.logo);
         appName = findViewById(R.id.app_name);
-        splashImg = findViewById(R.id.bg);
+        /*splashImg = findViewById(R.id.bg);*/
         lottieAnimationView = findViewById(R.id.lottie);
 
+/*
         splashImg.animate().translationY(-1800).setDuration(4000).setStartDelay(5000);
+*/
         logo.animate().translationY(2200).setDuration(4000).setStartDelay(5000);
         appName.animate().translationY(2200).setDuration(4000).setStartDelay(5000);
-        lottieAnimationView.animate().translationX(1600).setDuration(4000).setStartDelay(6000);
+        lottieAnimationView.animate().translationY(-2200).setDuration(6000).setStartDelay(8000);
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -43,7 +45,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 10000);
+        }, 5800);
 
     }
 }
