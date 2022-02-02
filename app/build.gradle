@@ -48,5 +48,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.airbnb.android:lottie:3.4.1'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
-
+    // jsoup HTML parser library @ https://jsoup.org/
+    implementation 'org.jsoup:jsoup:1.14.3'
 }
