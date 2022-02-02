@@ -54,7 +54,7 @@ import java.util.ArrayList;
 
             @Override
             public void onClick(View view) {
-                mOrderPageListener.getIssuerName(list.get(getAbsoluteAdapterPosition()).getSecurity_Name());
+                mOrderPageListener.getIssuerName(list.get(getAbsoluteAdapterPosition()).getIssuer());
             }
             public static interface OnClickOrder {
                 void getIssuerName(String issuer);

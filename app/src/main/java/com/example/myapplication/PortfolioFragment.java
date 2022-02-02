@@ -30,18 +30,20 @@ import java.util.List;
 
 
 public class PortfolioFragment extends Fragment {
-    private static final String URL_DATA="https://opensheet.elk.sh/1TxhkLIoaF91QxIk2FUF1vw2-MDdM-l6sJasvg9Qnqk4/Equity";
-    private static final String MARKET_URL="https://opensheet.elk.sh/1n_1WWV2sXd9_hwWWzrsI2NF9B_AqCkV6wCVAYjTqzFs/1";
-    private RecyclerView recyclerView,recyclerViewEx;
+    private static final String URL_DATA = "https://opensheet.elk.sh/1TxhkLIoaF91QxIk2FUF1vw2-MDdM-l6sJasvg9Qnqk4/Equity";
+    private static final String MARKET_URL = "https://opensheet.elk.sh/1n_1WWV2sXd9_hwWWzrsI2NF9B_AqCkV6wCVAYjTqzFs/1";
+    private RecyclerView recyclerView, recyclerViewEx;
     private RecyclerView.Adapter adapter;
     private RecyclerView.Adapter adapterEx;
-    public static Handler handler=new Handler();
+    public static Handler handler = new Handler();
     public static Runnable runnable;
     private List<Stocks> stocks;
     ImageView search;
     private List<Exchange> exchangeList;
-      public PortfolioFragment() {
+
+    public PortfolioFragment() {
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,18 +53,18 @@ public class PortfolioFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_portfolio, container, false);
-        recyclerView=(RecyclerView)view.findViewById(R.id.RV_stocks_owned);
-        stocks=new ArrayList<>();
-        exchangeList=new ArrayList<>();
+        View view = inflater.inflate(R.layout.fragment_portfolio, container, false);
+        recyclerView = (RecyclerView) view.findViewById(R.id.RV_stocks_owned);
+        stocks = new ArrayList<>();
+        exchangeList = new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter=new Adapter(getContext(),stocks);
+        adapter = new Adapter(getContext(), stocks);
 
 
-        recyclerViewEx=view.findViewById(R.id.RV_wallet);
+        recyclerViewEx = view.findViewById(R.id.RV_wallet);
 
         recyclerViewEx.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        adapterEx=new ExchangeAdapter(getContext(),exchangeList);
+        adapterEx = new ExchangeAdapter(getContext(), exchangeList);
         recyclerView.setAdapter(adapter);
         recyclerViewEx.setAdapter(adapterEx);
         loadExchange();
@@ -72,21 +74,20 @@ public class PortfolioFragment extends Fragment {
         return view;
 
     }
-    private  void refresh(int milli){
 
-        runnable =new Runnable() {
+    private void refresh(int milli) {
+        runnable = new Runnable() {
             @Override
             public void run() {
                 loadRecyclerView();
             }
         };
-
-        handler.postDelayed(runnable,milli);
-        recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+        handler.postDelayed(runnable, milli);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                switch(newState){
+                switch (newState) {
                     case RecyclerView.SCROLL_STATE_IDLE:
                         handler.postDelayed(runnable, milli);
                         break;
@@ -101,21 +102,19 @@ public class PortfolioFragment extends Fragment {
         });
     }
 
-    private  void refresh(int milli,int a){
-
-        runnable =new Runnable() {
+    private void refresh(int milli, int a) {
+        runnable = new Runnable() {
             @Override
             public void run() {
                 loadExchange();
             }
         };
-
-        handler.postDelayed(runnable,milli);
-        recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+        handler.postDelayed(runnable, milli);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
-                switch(newState){
+                switch (newState) {
                     case RecyclerView.SCROLL_STATE_IDLE:
                         handler.postDelayed(runnable, milli);
                         break;
@@ -129,6 +128,7 @@ public class PortfolioFragment extends Fragment {
             }
         });
     }
+
     private void loadRecyclerView() {
         try {
             RequestQueue requestQueue = Volley.newRequestQueue(getContext());
@@ -148,23 +148,19 @@ public class PortfolioFragment extends Fragment {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
                     }
-
                     adapter.notifyDataSetChanged();
                 }
-
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     Toast.makeText(getContext(), "Error listener", Toast.LENGTH_SHORT).show();
                 }
             });
-
             requestQueue.add(jsonArrayRequest);
-            refresh(100000);
+            refresh(2000);
         } catch (Exception e) {
-          //  Log.e("Exception",e.toString());
+            //  Log.e("Exception",e.toString());
         }
     }
 
@@ -200,9 +196,9 @@ public class PortfolioFragment extends Fragment {
             requestQueue.add(jsonArrayRequest);
             refresh(100000);
         } catch (Exception e) {
-            Log.e("Exception",e.toString());
+            Log.e("Exception", e.toString());
         }
-             recyclerViewEx.setAdapter(adapterEx);
-             adapterEx.notifyDataSetChanged();
+        recyclerViewEx.setAdapter(adapterEx);
+        adapterEx.notifyDataSetChanged();
     }
 }
