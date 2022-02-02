@@ -27,12 +27,6 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".OnboardingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Search_stock"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,14 +34,22 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Search_stock"
+            android:exported="false">
+
+        </activity>
+        <activity
             android:name=".NewsDetailActivity"
             android:exported="false" />
         <activity
             android:name=".StockRecycler"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
     </application>

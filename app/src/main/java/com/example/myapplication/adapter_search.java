@@ -31,7 +31,7 @@ import java.util.ArrayList;
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
             holder.id.setText(list.get(position).getIssuer());
-            holder.desc.setText(list.get(position).getSecurity_Name());
+            //holder.desc.setText(list.get(position).getSecurity_Name());
         }
 
         @Override
@@ -46,8 +46,8 @@ import java.util.ArrayList;
             public MyViewHolder(@NonNull View itemView,OnClickOrder m1OrderPageListener) {
                 super(itemView);
                 id=itemView.findViewById(R.id.Issuer_name);
-                desc=itemView.findViewById(R.id.ticker);
-                desc.setTextColor(Color.WHITE);
+                //desc=itemView.findViewById(R.id.ticker);
+                //desc.setTextColor(Color.WHITE);
                 mOrderPageListener=m1OrderPageListener;
                 itemView.setOnClickListener(this);
             }

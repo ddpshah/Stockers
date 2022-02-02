@@ -154,11 +154,11 @@ public class PortfolioFragment extends Fragment {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getContext(), "Error listener", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), "Error listener", Toast.LENGTH_SHORT).show();
                 }
             });
             requestQueue.add(jsonArrayRequest);
-            refresh(2000);
+            refresh(900000);
         } catch (Exception e) {
             //  Log.e("Exception",e.toString());
         }
@@ -189,12 +189,12 @@ public class PortfolioFragment extends Fragment {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getContext(), "Error listener", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), "Error listener", Toast.LENGTH_SHORT).show();
                 }
             });
 
             requestQueue.add(jsonArrayRequest);
-            refresh(100000);
+            refresh(900000);
         } catch (Exception e) {
             Log.e("Exception", e.toString());
         }

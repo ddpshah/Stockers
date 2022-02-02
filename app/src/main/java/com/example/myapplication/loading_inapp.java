@@ -13,13 +13,12 @@ public class loading_inapp {
         activity=myActivity;
     }
 
-    void startloading_user_admin(){
+    void startloading(){
 
         AlertDialog.Builder builder=new AlertDialog.Builder(activity);
         LayoutInflater inflater=activity.getLayoutInflater();
-        builder.setView(inflater.inflate(R.layout.loading,null));
+        builder.setView(inflater.inflate(R.layout.loading_in_app,null));
         builder.setCancelable(false);
-
         dialog=builder.create();
         dialog.show();
 

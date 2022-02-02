@@ -16,7 +16,6 @@ import java.util.Objects;
 public class loading_user_admin{
 
     private Activity activity;
-    private Fragment fragment;
     private AlertDialog dialog;
 
     loading_user_admin(Activity myActivity){

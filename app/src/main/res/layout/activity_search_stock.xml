@@ -4,27 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#101B37"
     android:orientation="vertical"
     tools:context=".Search_stock">
 
-
-    <EditText
-        android:id="@+id/searchview"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_bar"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
-        android:padding="5dp"
-        app:queryHint="Enter Stock Name"/>
+        android:hint="Enter Stock Name"
+        android:gravity="center"
+        android:textColorHint="@color/slight_grey"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/colorError"
+        app:helperTextTextColor="@color/colorError"
+        app:hintTextColor="@color/active">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchview"
+            android:layout_width="200sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="?android:textColorPrimary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/searchview"
+        android:layout_below="@id/search_bar"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp" />
