@@ -54,7 +54,7 @@ public class NewsFragment extends Fragment {
     private void getNews(String category){
         progressBar.setVisibility(View.VISIBLE);
         articlesArrayList.clear(); // clears and add specfic categories
-        String categoryURL="https://newsapi.org/v2/top-headlines?country=in&category="+"business"+"&apiKey=693b95cb550a4cb5ac004aa32cc76564";
+        String categoryURL="https://newsapi.org/v2/top-headlines?country=us&category="+"business"+"&apiKey=693b95cb550a4cb5ac004aa32cc76564";
         String url=categoryURL;
         String BASE_URL="https://newsapi.org/";
 
