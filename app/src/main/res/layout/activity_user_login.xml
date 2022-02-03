@@ -197,7 +197,7 @@
         android:fontFamily="@font/questrial"
         android:text="Forgot Password?"
         android:textColor="@color/active"
-        android:textSize="10sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline30"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toEndOf="@+id/btn_login_admin"
