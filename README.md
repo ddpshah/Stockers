@@ -1,4 +1,2 @@
-# Venture By Runtime Terror
-Hackathon application
+# Application designed for stock prediction
 
-Divyesh Shah
