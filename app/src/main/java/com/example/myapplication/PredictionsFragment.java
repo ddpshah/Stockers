@@ -33,7 +33,7 @@ private WebView webView;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        String dataURL="http://a0ee-35-237-123-143.ngrok.io/";
+        String dataURL="https://share.streamlit.io/w35573/stock-prediction/main/app.py";
 
         View view= inflater.inflate(R.layout.fragment_predictions, container, false);
         webView=view.findViewById(R.id.webView);

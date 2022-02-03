@@ -30,7 +30,7 @@ private WebView webView;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_charts, container, false);
-        String chartURL="http://d2e7-35-231-20-128.ngrok.io/";
+        String chartURL="https://share.streamlit.io/w35573/charts-webapp/main/charts.py";
         webView=view.findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(chartURL);
