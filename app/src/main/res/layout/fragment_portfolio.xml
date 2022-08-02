@@ -300,13 +300,18 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
             android:fontFamily="@font/questrial"
             android:text="Stock Name"
             android:textColor="@color/active"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintEnd_toStartOf="@+id/textView8"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -314,12 +319,15 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="18dp"
             android:fontFamily="@font/questrial"
             android:text="Price"
             android:textColor="@color/active"
+            android:textSize="16sp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintBottom_toBottomOf="@+id/textView8"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView8" />
 
         <TextView
@@ -327,11 +335,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/questrial"
             android:text="Security Code"
             android:textColor="@color/active"
+            android:textSize="16sp"
+            android:maxWidth="101dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
             app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider" />
 
         <ImageView
@@ -342,11 +356,8 @@
             android:layout_marginTop="14dp"
             android:src="@drawable/ic_logo_new"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" /><![CDATA[
+            app:layout_constraintTop_toTopOf="parent" />
 
-        />
-
-    ]]>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
